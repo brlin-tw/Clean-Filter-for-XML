@@ -1,0 +1,7 @@
+## Setup filters for Bash scripts
+## Refer .gitconfig for more information
+*.bash filter=bash
+
+## Setup filters for XML
+## Refer .gitconfig for more information
+*.xml filter=xml
