@@ -1,4 +1,5 @@
 # 用於 XML 的清潔過濾器<br>Clean Filter for XML
+[![Build Status](https://travis-ci.org/Lin-Buo-Ren/Clean-Filter-for-XML.svg?branch=master)](https://travis-ci.org/Lin-Buo-Ren/Clean-Filter-for-XML)  
 A clean filter for XML for Git and other applications.  Currently it only beautifies the file using XMLstarlet
 
 <https://github.com/Lin-Buo-Ren/Clean-Filter-for-XML>
