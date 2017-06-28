@@ -14,40 +14,41 @@ Feel free to customize it according to your project configuration, the following
 
 1. Add this repository as the repository's submodule with the following command:
 
-        git submodule\
-            add\
-            --depth=1\
-            'https://github.com/Lin-Buo-Ren/Clean-Filter-for-XML.git'
+		git submodule\
+			add\
+			--depth=1\
+			'https://github.com/Lin-Buo-Ren/Clean-Filter-for-XML.git'
 
 1. Update required sub-submodules with the following command:
 
-        git submodule\
-            update\
-                --init\
-                --recursive\
-                "Clean Filter for XML"
+		git submodule\
+			update\
+				--init\
+				--recursive\
+				"Clean Filter for XML"
 
 1. Setup external git config with the following command:
+	
+		git config\
+			--file .gitconfig\
+			filter.xml.clean\
+			'"./Clean Filter for XML/Clean Filter for XML.bash"'
 
-        git config\
-            --file .gitconfig\
-            filter.xml.clean\
-            '"./Clean Filter for XML/Clean Filter for XML.bash"'
-  Note that the single and double braces are required(for GNU Bash syntax, other shell may need adjustments)
+	Note that the single and double braces are required(for GNU Bash syntax, other shell may need adjustments)
 
 1. Setup Git to read previously created external config with the following command:
 
-        git config\
-            --local\
-            include.path\
-            ../.gitconfig
+		git config\
+			--local\
+			include.path\
+			../.gitconfig
 
 1. Add the following content in the `.gitattributes` file:
 
-        ## Setup filters for XML
-        ## Refer .gitconfig for more information
-        *.xml filter=xml
-  Add whatever filename extension that is in XML format.
+		## Setup filters for XML
+		## Refer .gitconfig for more information
+		*.xml filter=xml
+	Add whatever filename extension that is in XML format.
 
 1. All set!  From now on all XML file check-in will be automatically be cleaned!
 
