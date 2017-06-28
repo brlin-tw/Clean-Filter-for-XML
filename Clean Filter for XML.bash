@@ -40,6 +40,11 @@ init(){
 		exit 1
 	fi
 
+	printf --\
+		"%s: Cleaning XML markup...\n"\
+		"${RUNTIME_EXECUTABLE_NAME}"\
+		1>&2
+
 	local temp_file; temp_file="$(
 		mktemp\
 			--tmpdir\
