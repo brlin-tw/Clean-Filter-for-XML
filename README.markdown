@@ -19,6 +19,14 @@ Feel free to customize it according to your project configuration, the following
             --depth=1\
             'https://github.com/Lin-Buo-Ren/Clean-Filter-for-XML.git'
 
+1. Update required sub-submodules with the following command:
+
+        git submodule\
+            update\
+                --init\
+                --recursive\
+                "Clean Filter for XML"
+
 1. Setup external git config with the following command:
 
         git config\

@@ -40,13 +40,42 @@ init(){
 		exit 1
 	fi
 
+	local temp_file; temp_file="$(
+		mktemp\
+			--tmpdir\
+			"${RUNTIME_EXECUTABLE_NAME}.XXXXXX.tmp"
+	)"
+
+	# dump stdin
+	cat >"${temp_file}"
+
+	local xml_bash
+
+	if [ -f "${RUNTIME_EXECUTABLE_DIRECTORY}/xml.bash/xml.bash" ]; then
+		xml_bash="${RUNTIME_EXECUTABLE_DIRECTORY}/xml.bash/xml.bash"
+	elif which xml.bash >/dev/null; then
+		xml_bash="$(which xml.bash)"
+	else
+		printf --\
+			"%s: This program requires xml.bash, but xml.bash is not found"\
+			"${RUNTIME_EXECUTABLE_NAME}"\
+			"1>&2"
+		exit 1
+	fi
+	# Scope of external project
+	# shellcheck disable=SC1090
+	source "${xml_bash}"; unset xml_bash
+
 	printf --\
 		"%s: Beautifying XML markup...\n"\
 		"${RUNTIME_EXECUTABLE_NAME}"\
 		1>&2
-	xmlstarlet\
-		format\
-		--indent-tab
+	
+	xml_beautify_file\
+		"${temp_file}"
+
+	# dump to stdout
+	cat "${temp_file}"
 
 	exit 0
 }; declare -fr init
