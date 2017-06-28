@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+	<!-- 
+		This file modifies the font matching so that the Noto * CJK and Source Han * font Super OTC equivalent will be consider as the same font
+		DOCUMENTATION: fonts-conf
+ <https://www.freedesktop.org/software/fontconfig/fontconfig-user.html>
+	-->
+<match target="pattern">
+<test name="family" qual="any">
+<string>Source Han Sans</string>
+</test>
+<edit name="family" mode="append" binding="same">
+<string>Noto Sans CJK</string>
+</edit>
+</match>
+
+<match target="pattern">
+<test name="family" qual="any">
+<string>Noto Sans CJK</string>
+</test>
+<edit name="family" mode="append" binding="same">
+<string>Source Han Sans</string>
+</edit>
+</match>
+</fontconfig>
