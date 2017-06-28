@@ -46,8 +46,7 @@ init(){
 		update\
 			--depth=1\
 			--init\
-			--recursive\
-			"${RUNTIME_EXECUTABLE_DIRECTORY}/Clean Filter for GNU Bash Scripts"
+			--recursive
 
 	git config\
 		--local\
