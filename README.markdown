@@ -18,7 +18,8 @@ Feel free to customize it according to your project configuration, the following
 		git submodule\
 			add\
 			--depth=1\
-			'https://github.com/Lin-Buo-Ren/Clean-Filter-for-XML.git'
+			'https://github.com/Lin-Buo-Ren/Clean-Filter-for-XML.git'\
+			'Clean Filter for XML'
 
 1. Update required sub-submodules with the following command:
 
