@@ -32,7 +32,7 @@ Feel free to customize it according to your project configuration, the following
         git config\
             --file .gitconfig\
             filter.xml.clean\
-            '"Clean Filter for XML/Clean Filter for XML.bash"'
+            '"./Clean Filter for XML/Clean Filter for XML.bash"'
   Note that the single and double braces are required(for GNU Bash syntax, other shell may need adjustments)
 
 1. Setup Git to read previously created external config with the following command:
