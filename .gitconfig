@@ -2,4 +2,4 @@
 	clean = \"Clean Filter for GNU Bash Scripts/Clean Filter for GNU Bash Scripts.bash\"
 
 [filter "xml"]
-	clean = \"Clean Filter for XML.bash\"
+	clean = \"./Clean Filter for XML.bash\"
