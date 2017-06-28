@@ -1,1 +1,0 @@
-Git Pre-commit Hook for GNU Bash Projects/Git Pre-commit Hook for GNU Bash Projects.bash
